@@ -9,14 +9,14 @@
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script>
   if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-          var video = document.getElementById('video');
-          video.style.cssText = "-moz-transform: scale(-1, 1); \
-          -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); \
-          transform: scale(-1, 1); filter: FlipH;";
-          video.srcObject = stream;
-          video.play();
-      });
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+      var video = document.getElementById('video');
+      video.style.cssText = "-moz-transform: scale(-1, 1); \
+      -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); \
+      transform: scale(-1, 1); filter: FlipH;";
+      video.srcObject = stream;
+      video.play();
+    });
   }
 
   var canvas = document.getElementById('canvas');
@@ -25,7 +25,7 @@
   context.translate(canvas.width, 0);
   context.scale(-1, 1);
   document.getElementById("webcamBtn").addEventListener("click",function() {
-      photo = context.drawImage(video,0,0,480,320);
+    photo = context.drawImage(video,0,0,480,320);
   });
 
   function posting() {
@@ -59,7 +59,7 @@
         } else if(data == "angry") {
           location.href="/chat/angry"
         } else if (data == "no_person") {
-          alert('사진에 사람새끼가 없습니다');
+          alert('사진에 사람이 없습니다');
         } else if (data == "no_file") {
           alert('사진이 없습니다');
         } else if (data == "error") {
