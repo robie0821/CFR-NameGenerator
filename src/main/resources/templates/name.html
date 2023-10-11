@@ -1,0 +1,21 @@
+<html>
+<meta charset="UTF-8">
+<body>
+<div>
+  <input type="text" id="namespace" value="닉네임 생성">
+  <button id="nameBtn" type="button"> 닉네임 생성</button>
+</div>
+</body>
+</html>
+
+<script type="module">
+  import NickName from '/NickName.json'assert{type:"json"};
+
+  document.getElementById("nameBtn").addEventListener("click",function() {
+    const result = document.getElementById('namespace');
+    result.value = NickName.Front[Math.floor(Math.random() * NickName.Front.length)]
+     + " " + NickName.Back[Math.floor(Math.random() * NickName.Back.length)];
+
+  });
+
+</script>
