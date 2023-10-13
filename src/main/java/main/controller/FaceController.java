@@ -21,6 +21,11 @@ public class FaceController {
     return "/photo";
   }
 
+  @GetMapping("/autoPhoto")
+  public String autoPhoto(Model model) {
+    return "/autoPhoto";
+  }
+
 
   @PostMapping("/face")
   @ResponseBody

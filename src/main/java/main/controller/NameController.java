@@ -12,4 +12,9 @@ public class NameController {
   public String createName(Model model) {
     return "/name";
   }
+
+  @GetMapping("/timer")
+  public String timer(Model model) {
+    return "/timer";
+  }
 }
